@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="501.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.UsuarioListController">
+   <children>
+      <Label text="Registrar usuário">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" text="Novo" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="tableViewUsuario" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="tableColumnId" prefWidth="51.0" text="ID" />
+          <TableColumn fx:id="tableColumnName" prefWidth="209.0" text="Nome" />
+            <TableColumn fx:id="tableColumnEmail" minWidth="2.0" prefWidth="201.0" text="Email" />
+            <TableColumn fx:id="tableColumnBirthDate" prefWidth="138.0" text="Data nascimento" />
+            <TableColumn fx:id="tableColumnConta" prefWidth="75.0" text="Conta" />
+            <TableColumn fx:id="tableColumnEDIT" onEditStart="#onDataChanged" prefWidth="88.0" />
+            <TableColumn fx:id="tableColumnREMOVE" onEditStart="#onDataChanged" prefWidth="93.0" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
